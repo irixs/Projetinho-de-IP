@@ -8,7 +8,7 @@ public class LivroLiterario extends Livro {
 		this.calcularPreco(ano);
 	}
 	public void calcularPreco(int ano) {
-		Double valor = ano * 0.001;
+		double valor = ano * 0.01;
 		this.setPreco(valor);
 	}
 }

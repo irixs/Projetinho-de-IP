@@ -1,7 +1,7 @@
 package Livro.exception;
  
 public class AnoInvalidoException extends Exception {
-	public AnoInvalidoException () {
-		super ("Ano de edição invalido, insira um ano entre 1900 e 2018");
+	public AnoInvalidoException (String titulo, int ano) {
+		super ("Ano de edição invalido para o livro " + titulo + " de ano " + ano);
 	}
 }

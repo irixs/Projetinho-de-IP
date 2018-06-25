@@ -15,16 +15,16 @@ public class CadastroLivro {
 	public void remover (String titulo, int ano) throws LivroNaoEncontradoException {
 		if (this.repositorioLivro.existe(titulo, ano)) {
 			this.repositorioLivro.remover(titulo, ano);
-		} else throw new LivroNaoEncontradoException();
+		} else throw new LivroNaoEncontradoException(titulo, ano);
 	}
 	public void atualizar (Livro livro) throws LivroNaoEncontradoException {
 		if (this.repositorioLivro.existe(livro.getTitulo(), livro.getAno())) {
 			this.repositorioLivro.atualizar(livro);
-		} else throw new LivroNaoEncontradoException();
+		} else throw new LivroNaoEncontradoException(livro.getTitulo(), livro.getAno());
 	}
 	public Livro procurar (String titulo, int ano) throws LivroNaoEncontradoException {
 		if (this.repositorioLivro.existe(titulo, ano)) {
 			return this.repositorioLivro.procurar(titulo, ano);
-		} else throw new LivroNaoEncontradoException();
+		} else throw new LivroNaoEncontradoException(titulo, ano);
 	}
 }

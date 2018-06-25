@@ -8,10 +8,7 @@ public class LivroAcademico extends Livro {
 		this.calcularPreco(ano);
 	}
 	public void calcularPreco(int ano) {
-		Double valor = 2018.0 - ano*0.25;
-		if (valor < 5.0) {
-			valor = 5.0;
-		}
+		double valor = 2018 - ano*0.25;
 		this.setPreco(valor);
 	}
 }

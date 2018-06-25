@@ -10,7 +10,7 @@ public class HQ extends Livro{
 		this.calcularPreco(this.raridade);
 	}
 	public void calcularPreco(int raridade) {
-		Double valor = 2.0*raridade;
+		double valor = 4*raridade;
 		this.setPreco(valor);
 	}
 }

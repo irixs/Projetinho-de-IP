@@ -8,10 +8,10 @@ public abstract class Livro {
 	private double preco;
 	
 	Livro (String titulo, int ano) throws AnoInvalidoException {
-		if (ano >= 1900 && ano <= 2018) {
+		if (ano >= 1600 && ano <= 2018) {
 			this.titulo = titulo;
 			this.ano = ano;
-		} else throw new AnoInvalidoException();
+		} else throw new AnoInvalidoException(titulo, ano);
 	}
 	
 	public String getTitulo() {

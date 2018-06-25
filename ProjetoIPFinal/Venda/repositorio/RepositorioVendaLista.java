@@ -23,9 +23,9 @@ public class RepositorioVendaLista implements RepositorioVenda {
 	public boolean existe (int codigo) {
 		if (this.venda != null && this.venda.getCodigo() == codigo) { 
 			return true;
-		}else if (this.prox.venda != null) {
-			return this.prox.existe(codigo);
-		}return false;
+		}else if (this.prox == null) {
+			return false;
+		} else return this.prox.existe(codigo);
 	}
 
 	public void remover (int codigo) {
